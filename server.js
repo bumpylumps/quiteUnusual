@@ -119,4 +119,4 @@ fetch(URL,params)
 */
 
 //Set up listener
-app.listen(PORT, () => console.log(`Server is running on Port: ${PORT}`))
+app.listen(process.env.PORT || PORT, () => console.log(`Server is running on Port: ${PORT}`))
