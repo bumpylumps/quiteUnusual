@@ -1,0 +1,117 @@
+Page notes: 
+
+ x - Change title of Nav from Quite Unusual Incorporated to Inc.
+ x - Change patreon label to "support the show"
+ - Add Suggested Merch scroll box on checkout page
+ x - Make sure that contact icons all have proper routes
+ x - Make patreon link open in new tab
+
+ - make nav sticky(follow scroll)
+ - add animation fade ins for pages
+
+ - fix responsive layouts
+
+	
+
+ - Build About Us:
+	x -find template
+	x -customize --> x - need color, x - fix contact buttons
+	x -add story/topic submissions box under contact us	
+	x - get colors
+	- fix images in mobile
+	- get contact form hooked up
+	x - add setting for pink on hover in nav
+
+- Build Item Page
+		x -find template
+		x -customize
+		-get confirmation on merch page requirations
+		-play with margins for middle of major sections
+		-make logic for quantity picker
+		-set up form submission for Add to Cart
+		-get arrows on dropdown menu
+		-get rid of arches in background
+
+
+ - Build Home Page with Episode Listener
+	x - find template
+	x - customize
+	x - prototype Episode Listener
+	x - research buzzsprout api
+	-update image carousal logic
+	x -customize listener
+	x -confirm buzzsprout API access
+	x -integrate listener into page
+	-add podcast environment symbols (appl, spotify, getpooder, etc)
+
+
+
+	- Build server
+		- securely import APItoken and URL id from .env instead of using on server page
+		-x properly link styles to pages in express
+		-x reroute page links with GET requests
+		-x set up buzzsprout fetch request for episodes
+			-x pass episodes into episode listener on index.ejs 
+				x 1) connect to buzzsprout db, fetch episode info 
+				x 2) declare class variable for episode list items (in server)
+				x 3) build episode listener with play button (see episode listener section)
+				x 4) pass episode data to index.ejs
+						x - declare ul with class
+						x - using EJS loop through each episode and:
+							- declare li and divs for -episode number, episode title,  timestamp
+							- convert timestamp to human time
+							
+ 	
+	Episode Listener: 
+		-  x get episode info from db
+			-  x asynch request with auth to db (in server)
+			- x  for loop through data with each ep
+			- x create li for each ep with:
+					x- title, number, length 
+						convert length to human time
+						style divs so list items are even
+
+			- make li button to select for listening
+			- x add play/pause button
+			- x add tracker slider thing
+			-  add speed selector
+				-hook all these up
+			- x have list scroll
+			- x make server side fetch request based off Leon's rapper API 
+
+- Build Merch Page
+		x -find template
+		x -customize
+		-confirm merch page requiration
+ 	
+
+ - Build Checkout Page with suggested merch carosaul
+		-find template
+		-customize
+		-confirm store requiration
+		-research point of sale API's for cards/paypal plugins
+		-add image carosaul for suggested merch
+		
+
+ - Build Cart Page
+		x -find template
+		x -customize
+		- tighten up positioning of item list elements
+		- fix quantity picker
+		-Prototype cart module
+ 
+
+
+Colors:
+ #bbf7f9
+ #e266dd
+ #2e86c1
+ #663ab8
+ #c626d1
+ #5dade2
+
+#404288 <=== background color
+#F7C9E6 <===== hover link text color
+
+
+

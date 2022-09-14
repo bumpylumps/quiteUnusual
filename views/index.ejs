@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quite Unusual Inc.</title>
+    	<meta charset="utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<!--Style links and fonts-->
+		<link rel="stylesheet" href="/assets/css/reset.css">
+		<link rel="stylesheet" href="/assets/css/normalize.css">
+    	<link rel="stylesheet" href="/assets/css/main.css">
+		
+		<!--Font Awesome-->
+		<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+
+    </head>
+
+
+
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<div id="header">
+
+					<!-- Logo -->
+                    <div class="logoContainer">
+						<h1><a href="/" id="logo">Quite Unusual Inc.</a></h1>
+                    </div>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li class="current"><a href="index.html">Home</a></li>
+								<li ><a href="/about">About Us</a></li>
+								<li><a href="/merch">Merch</a></li>
+								<li><a href="https://www.patreon.com/QuiteUnusualPod" target="_blank">Join the Coven</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+            <!-- Gigantic Heading -->
+				<section class="wrapper style2" id="homeCaro">
+					<div class="container">
+						<header class="major">
+							
+						</header>
+					</div>
+				</section>    
+
+            <section class="wrapper style2 hero">
+                <div class="container">
+                    <h2>For when things get Quite Unusual</h2>
+                    <p>Join best friends, Nicole and Noelle in the Haunted Attic as 
+						they talk about all sorts of strange and unusual topics. 
+						From history's most nefarious cults, local ghost stories, 
+						conspiracies, murder mysteries, paranormal activities, urban legends, 
+						UFO phenomena, and unexplained events. Nothing is off limits but everything 
+						is unusual, so sit back, get weird with us and remember to Celebrate the
+						 Strange and Keep it Unusual! Find us on social media
+						  @QuiteUnusualPod - Email us at QuiteUnusualPod@gmail.com. Or 
+						send us something spooky! P.O. Box 1212 Des Plaines, IL, 60017
+                    </p>
+					
+                </div>
+                
+
+
+				<section class="listener-banner">
+					<h2> Give us a listen!</h2>
+				</section>
+
+		<!--Episode listener Area-->
+		
+                <div class="episode-listener-container">
+					<img src="/assets/css/images/logo.png" id="logo">
+					<section class="episode-listener-interior">
+					<section class="episode-player-block">
+						<div class="details">
+							<div class="episode-name">Episode Title</div>
+						</div>
+					<div class = "episode-player">
+						<div class="buttons">
+							<div class="playpause-track" onclick="playpauseTrack()">
+								<i class="fa fa-play-circle fa-5x"></i>
+							</div>
+						</div>
+
+						<div class="slider_container">
+							<div class="current-time">00:00</div>
+							<input type="range" min="1" max="100"
+								value="0" class="seek_slider" onchange="seekTo()">
+							<div class="total-duration">00:00</div>
+						</div>
+					</div>
+				</section>
+					<div class="episode-list-container">
+						<ul class="episode-list">
+							<% episodes.forEach( el => { %>
+								<li class="episodeItem" >
+									<span class="<%= el.episode_number %>"><%= el.episode_number %></span>
+									<span class="<%= el.title %>" id="episode-title"><%= el.title %></span>
+									<span class="episode-length"><%= el.duration %></span>
+									<span class="source" id="episode-source" ><%= el.audio_url %></span>
+								</li>
+							<% }) %>  
+						</ul>
+					</div>
+				</section>
+				</div>	
+					<aside class="podcast-sources">
+						<ul>
+							<li><a href="apple">Apple Podcasts</a></li>
+						</ul>
+					</aside>
+                
+            </section>
+		
+			
+		
+
+			
+         
+            <!--Story Submissions-->
+            <div class="container submit">
+                <section class="col-6 col-12-narrower">
+			    	<h3>Got a story or topic submission? <br> Feel free to reach out!</h3>
+			    	<form>
+			    		<div class="row gtr-50">
+			    			<div class="col-6 col-12-mobilep">
+			    				<input type="text" name="name" id="name" placeholder="Name" />
+			    			</div>
+			    			<div class="col-6 col-12-mobilep">
+			    				<input type="email" name="email" id="email" placeholder="Email" />
+			    			</div>
+			    			<div class="col-12">
+			    				<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+			    			</div>
+			    			<div class="col-12">
+			    				<ul class="actions">
+			    					<li><input type="submit" class="button alt" value="Send Message" /></li>
+			    				</ul>
+			    			</div>
+			    		</div>
+			    	</form>
+			    </section>
+            </div>
+
+               <!--Contact Us-->
+               <div class="container contact">
+                <h2>Join us online</h2>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/quiteunusualpod" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="https://www.facebook.com/QuiteUnusualPod" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+                    <li><a href="https://www.instagram.com/quiteunusualpod/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="mailto:quiteunusualpod@gmail.com" class="icon circle fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+                </div>
+	
+				
+					<!-- Copyright -->
+						<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Quite Unsual Inc. All rights reserved</li>
+							</ul>
+						</div>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="/assets/js/jquery.min.js"></script>
+			<script src="/assets/js/jquery.dropotron.min.js"></script>
+			<script src="/assets/js/browser.min.js"></script>
+			<script src="/assets/js/breakpoints.min.js"></script>
+			<script src="/assets/js/util.js"></script>
+			<script src="/assets/js/main.js"></script>
+
+	</body>
+</html>
