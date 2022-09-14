@@ -3575,6 +3575,16 @@ input, select, textarea {
 		width: 20%;
 	}
 
+	/*about page*/
+
+	.bioImage {
+		width: 80%;
+		height: 500px;
+	}
+
+	.bioH3 {
+		font-size: 2em;
+	}
 
 	/*episode listener*/
 
