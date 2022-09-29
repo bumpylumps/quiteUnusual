@@ -1,11 +1,12 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
-/*
-	Arcana by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+
+
+
+
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -100,9 +101,9 @@ input, select, textarea {
 	body, input, select, textarea {
 		color: #bbf7f9;
 		background-color: #404288;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Libre Baskerville', serif;
 		font-size: 16pt;
-		font-weight: 300;
+		font-weight: 400;
 		line-height: 1.65em;
 	}
 
@@ -2564,9 +2565,9 @@ input, select, textarea {
 
     #header h1 {
 		padding: 2% 5%;
-		width: 44%;
-		margin: 2% auto;
-		font-size: 2em;
+    	width: 53%;
+    	margin: 2% auto;
+    	font-size: 2em;
     }
 	
     #header h1 a {
@@ -2618,7 +2619,7 @@ input, select, textarea {
 			#nav > ul > li {
 				position: relative;
 				display: inline-block;
-				margin-left: 1em;
+				margin-left: 5em;
 			}
 
 				#nav > ul > li a {
@@ -3425,13 +3426,23 @@ input, select, textarea {
 
 	.hero{
 		text-align: center;
-		width: 75%;
+		width: 80%;
 		margin: 5% auto;
-
+		border-radius: .5%;
 	}
 
 	.hero img {
 		margin: 10% 0 0 0;
+	}
+
+	.hero2 {
+		text-align: center;
+    	border-top-left-radius: .5%;
+    	border-top-right-radius: .5%;
+    	width: 80%;
+    	margin: 2% auto;
+    	padding-top: 3%;
+    	padding-bottom: 0;
 	}
 
 	#logo {
@@ -3588,9 +3599,7 @@ input, select, textarea {
 
 	/*episode listener*/
 
-	.listener-banner {
-		margin-top: 25%;
-	}
+
 
 	@keyframes example {
 		0% {
@@ -3640,12 +3649,13 @@ input, select, textarea {
 		}
 
 	.episode-listener-container {
-		border: 2px solid #c626d1;
-    	border-radius: 1%;
+		border-radius: .5%;
     	display: flex;
     	background: linear-gradient(#404288, pink);
-    	margin: 10% auto;
+    	margin: 3% auto;
+    	margin-bottom: 0;
 	}
+	
 
 	.episode-listener-interior {
 		width: 70%;
@@ -3733,6 +3743,7 @@ input, select, textarea {
 		padding: 2% 0%;
     	margin: 0;
     	width: 100%;
+		line-height: 2;
     	height: 50px;
     	overflow: hidden;
 	}
@@ -3746,4 +3757,13 @@ input, select, textarea {
 		visibility: hidden;
 		width: 0;
 		height: 0;
+	}
+
+
+	div#page-wrapper {
+		background-color: rgba(41, 117, 167, .3);
+	}
+
+	.podcast-sources{
+		background-color:  rgba(41, 117, 167, .33);
 	}
