@@ -3621,7 +3621,7 @@ input, select, textarea {
 	}
 
 	.episode-name-animated {
-		animation: 15s linear 1s infinite running example;
+		animation: 18s linear 1s infinite running example;
 		animation-fill-mode: reverse;
 		margin: 2% auto;
 		margin-top: 0%;
