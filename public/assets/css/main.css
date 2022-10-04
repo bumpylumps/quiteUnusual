@@ -3588,9 +3588,17 @@ input, select, textarea {
 
 	/*about page*/
 
-	.bioImage {
+	.aboutHero {
+		text-align: center;
 		width: 80%;
-		height: 500px;
+		margin: 5% auto;
+		border-radius: .5%;
+	}
+
+	.bioImage {
+		width: 73%;
+		height: 300px;
+		
 	}
 
 	.bioH3 {
