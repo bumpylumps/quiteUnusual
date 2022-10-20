@@ -87,6 +87,7 @@ console.log(document.querySelector(".episode-list").childNodes[1].childNodes[7].
 
 function firstTrack(loadTrack) {
 	let src = document.querySelector(".episode-list").childNodes[1].childNodes[7].innerHTML;
+
 	loadTrack(src)
 	updateTimer = setInterval(seekUpdate, 1000);
 	document.querySelector('.episode-name').innerText = document.querySelector(".episode-list").childNodes[1].childNodes[3].innerHTML
@@ -123,7 +124,7 @@ function select(ep) {
 	// Set an interval of 1000 milliseconds
     // for updating the seek slider
     updateTimer = setInterval(seekUpdate, 1000);
-	if(ep.parentNode.childNodes[3].innerText.length > 50){
+	if(ep.parentNode.childNodes[3].innerText.length > 45){
 		document.querySelector('.episode-name').innerText = ep.parentNode.childNodes[3].innerText
 		document.querySelector('.episode-name').classList += ' episode-name-animated'
 		console.log(document.querySelector('.episode-name').classList)
@@ -147,6 +148,10 @@ function playTrack() {
 	// Play the loaded track
 	curr_track.play();
 	isPlaying = true;
+	let src = document.querySelector(".episode-list").childNodes[1].childNodes[7].innerHTML;
+	if(src.length > 45){
+		document.querySelector('.episode-name').classList += ' episode-name-animated'
+	}
 	if(document.querySelector(".episode-name-animated")){
 		document.querySelector(".episode-name-animated").style.animationPlayState = "running"
 	}

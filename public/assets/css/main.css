@@ -3693,6 +3693,19 @@ input, select, textarea {
 		margin-bottom: 15%;
 	}
 
+	input[type=range]::-webkit-slider-thumb {
+		-webkit-appearance : none;
+		background : darkblue;
+		border-radius: 25%;
+		height : 10px;
+		width : 3px;
+	  }
+
+	  .current-time {
+		width: 7%;
+		max-width: 9%;
+		margin-right: 4%;
+	}
 	
 
 	.buttons:hover{
