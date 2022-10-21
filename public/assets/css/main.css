@@ -84,7 +84,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f7f7f7 url("images/bg01.png");
+		background: #f7f7f7 url("images/bannerone.png");
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3795,4 +3795,8 @@ input, select, textarea {
 		padding-left: 2%;
 		margin-bottom: 0;
 		padding-bottom: 2%;
+	}
+
+	body {
+		background: url(images/stars2.png);
 	}
