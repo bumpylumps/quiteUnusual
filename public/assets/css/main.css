@@ -3415,11 +3415,11 @@ input, select, textarea {
 
 	#homeCaro{
 		width: 80%;
-		height: 300px;
-		margin: 0 auto;
+		height: 400px;
+		margin: 2% auto;
+		padding: 0%;
 		border: 3px solid purple;
 		color: lightblue;
-		background-image: url('https://placekitten.com/1000/300');
 		background-size: cover;
 		overflow: hidden;
 	}
@@ -3604,6 +3604,52 @@ input, select, textarea {
 	.bioH3 {
 		font-size: 2em;
 	}
+
+
+
+	/*home carosaul*/
+
+	.carousal {
+		margin: 0;
+		max-width: 100%;
+
+	}
+
+	.slideshow {
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+
+	}
+
+	.slideshow-wrapper {
+		display: flex;
+		width: 500%;
+		height: 100%;
+		position: relative;
+		animation: slideshow 20s infinite;
+	}
+
+	.slide {
+		width: 100%;
+		height: 100%;
+	}
+
+	.slide img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	@keyframes slideshow {
+		0%  { left: 0; }
+		20% { left: -100%; }
+		40% { left: -200%; }
+		60% { left: -300%; }
+		80% { left: -400%; }
+		100% { left: 0%; }
+	}
+
 
 	/*episode listener*/
 
