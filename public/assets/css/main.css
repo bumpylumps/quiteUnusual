@@ -3416,9 +3416,9 @@ input, select, textarea {
 	#homeCaro{
 		width: 80%;
 		height: 400px;
-		margin: 2% auto;
+		margin: 1% auto;
 		padding: 0%;
-		border: 3px solid purple;
+		border: 2px solid purple;
 		color: lightblue;
 		background-size: cover;
 		overflow: hidden;
@@ -3643,10 +3643,15 @@ input, select, textarea {
 
 	@keyframes slideshow {
 		0%  { left: 0; }
+		12%  { left: 0; }
 		20% { left: -100%; }
+		32% { left: -100%; }
 		40% { left: -200%; }
+		52% { left: -200%; }
 		60% { left: -300%; }
+		72% { left: -300%; }
 		80% { left: -400%; }
+		92% { left: -400%; }
 		100% { left: 0%; }
 	}
 
