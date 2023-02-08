@@ -3561,16 +3561,25 @@ input, select, textarea {
 	}
 
 	.merchItemContainer {
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		margin: 0 auto;
+		width: 80%;
+		margin: 5% auto;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	}
 
+	.merchItemContainer ul {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	.merchItemContainer li {
+		list-style: none;
+	}
+
+
 	.merchItem {
-	    width: 10%;
+		width: 20%;
     	margin: 2% 6%;
 	}
 
@@ -3582,9 +3591,11 @@ input, select, textarea {
 		text-align: center;
 	}
 
-	merchItem img{
-		width: 20%;
+	.merchItem img{
+		width: 100%;
 	}
+
+
 
 	/*about page*/
 

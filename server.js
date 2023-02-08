@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended: true}))
 //Getting episodes from buzzsprout db
 let originalFresh = 'Wed, 17 Aug 2022 18:06:04 GMT'
 let tag = 'W/"23823c33da2c67e553b1334596171947"'
-let params = {
+let episodeParams = {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
@@ -30,11 +30,19 @@ let params = {
     }
 }
 
+//Getting inventory from printify
+const inventoryParams = {
+    method: 'GET',
+    headers: {
+        'Authorization': `Bearer ${process.env.INVENTORYTOKEN}`
+    }
+}
+
 
 //GET views
 app.get('/', async (req,res) => {
     try {
-        const response = await fetch(`${process.env.URL}`, params)
+        const response = await fetch(`${process.env.URL}`, episodeParams)
         const data = await response.json()
 
         let fresh = response.headers.get('Last-Modified')
@@ -73,7 +81,11 @@ app.get('/about', async (req,res) => {
 
 app.get('/merch', async (req,res) => {
     try {
-        res.render('merch.ejs')
+        const response = await fetch(`${process.env.INVENTORY}`, inventoryParams)
+        const data = await response.json()
+
+        
+        res.render('merch.ejs', { inventory: data })
     } catch(err) {
         if(err) {
             console.log(`I\'m borked. Error: ${err}`)

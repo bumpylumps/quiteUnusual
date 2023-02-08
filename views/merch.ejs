@@ -34,128 +34,31 @@
 
 				</div>			
 
-				<section class="wrapper style2 shopNav">
-				<div class="container">
-					<ul>
-						<a href=""><li>Shirts</li></a>
-						<a href=""><li>Stickers</li></a>
-						<a href=""><li>Mugs</li></a>
-						<a href="/cart"><li>Cart</li></a>
-					</ul>
-				</div>
+				
+			<section class="wrapper style2 merchItemContainer">
+				<ul>
+					<% inventory.data.forEach( el => { %> 
+						<li class="container merchItem">
+							<a href="/item">
+								<img src="<%= el.images[0].src %>" />
+								<h4><%= el.title %></h4>
+							</a>
+						</li>
+					<% }) %>
+				</ul>
 			</section>
-			
-			<div class="container merchItemContainer">
-            	<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-					<div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
-				<section class="wrapper style2 merchItem">
-            	    <div class="container">
-						<a href="/item">
-            	        <img class="image" src="https://placekitten.com/150/150">
-            	        <h4>Item Name</h4>
-						<h4>$xx.00</h4>
-						</a>
-            	    </div>
-            	</section>
 
-		</div>
+			<!--
+            <section class="wrapper style2 merchItem">
+                <div class="container">
+					<a href="/item">
+                    <img class="image" src="https://placekitten.com/150/150">
+                    <h4>Item Name</h4>
+					<h4>$xx.00</h4>
+					</a>
+                </div>
+            </section>
+		-->
 
 			
 		
