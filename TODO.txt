@@ -115,3 +115,13 @@ Colors:
 
 
 
+Update architecture: 
+	1) mkdir controllers 
+	2) mkdir routes
+	3) mkdir config
+	3) reroute about me to contain controller and routes
+	4) reroute contact page
+	5) reroute index
+	6) reroute merch 
+	7) reroute env related vars
+	

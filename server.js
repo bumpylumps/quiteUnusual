@@ -5,6 +5,8 @@ const PORT = 8300;
 const cors = require('cors')
 const fetch = require('node-fetch')
 
+const mainRoutes = require('./routes/main');
+
 
 //configs link
 require('dotenv').config({path: '.env'})
@@ -68,16 +70,10 @@ app.get('/', async (req,res) => {
     }
 })
 
-app.get('/about', async (req,res) => {
-    try {
-        res.render('about-us.ejs')
-    } catch(err) {
-        if(err) {
-            console.log(`I\'m borked. Error: ${err}`)
-            return res.status(500).send(err)
-        }
-    }
-})
+
+
+app.use('/', mainRoutes);
+
 
 app.get('/merch', async (req,res) => {
     try {
