@@ -6,9 +6,9 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     	
         <!--Style links and fonts-->
-		<link rel="stylesheet" href="assets/css/reset.css">
-		<link rel="stylesheet" href="assets/css/normalize.css">
-    	<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="../../assets/css/reset.css">
+		<link rel="stylesheet" href="../../assets/css/normalize.css">
+    	<link rel="stylesheet" href="../../assets/css/main.css">
 
     </head>
 	<body class="is-preload">
@@ -19,16 +19,16 @@
 
 					<!-- Logo -->
                     <div class="logoContainer">
-						<h1><a href="index.html" id="logo">Quite Unusual Inc.</a></h1>
+						<h1><a href="/" id="logo">Quite Unusual Inc.</a></h1>
                     </div>
 						<!-- Nav -->
                         <nav id="nav">
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li ><a href="/about">About Us</a></li>
-                                <li><a href="/merch">Merch</a></li>
+                                <li class="current"><a href="/merch">Merch</a></li>
                                 <li><a href="https://www.patreon.com/QuiteUnusualPod" target="_blank">Join the Coven</a></li>
-                                <li class="current"><a href="/contact">Contact</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </nav>
     
@@ -37,19 +37,15 @@
                 <div class="item-container">
                     <section class="wrapper style2 item item-banner">
                         <a href="/merch">Back to Store</a>
-                        <img src="https://placekitten.com/400/400" alt="store item">
+                        <img src="<%= item.images[0].src %>" alt="store item">
                         <input type="submit" class="button alt" id="addToCart" value="Add to Cart"/>
                     </section>
 
                     <section class="wrapper style2 item">
                         <div class="container">
-                            <h2>Item/Label</h2>
-                            <h3>$xx.00</h3>
-                            <ul>
-                                <li>Details</li>
-                                <li>Details</li>
-                                <li>Details</li>
-                            </ul>
+                            <h2><%= item.title %></h2>
+                            <h3>$<%= item.variants[0].price %></h3>
+                            <%- item.description %>
                             <label for="size">Size: </label>
                             <select name="size" id="size">
                                 <option value="small">Small</option>

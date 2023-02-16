@@ -39,7 +39,7 @@
 				<ul>
 					<% inventory.data.forEach( el => { %> 
 						<li class="container merchItem">
-							<a href="/item">
+							<a href="/merch/item/<%= el.id %>">
 								<img src="<%= el.images[0].src %>" />
 								<h4><%= el.title %></h4>
 							</a>
