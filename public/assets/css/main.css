@@ -114,7 +114,6 @@ input, select, textarea {
 		transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		color: #37c0fb;
 		text-decoration: none;
-		border-bottom: dotted 1px;
 	}
 
 		a:hover {
@@ -2902,9 +2901,7 @@ input, select, textarea {
 
 		/* Header */
 
-			#header {
-				padding: 2em 0 0 0;
-			}
+			
 
 				#header h1 {
 					padding: 0 0 1.75em 0;
@@ -3666,6 +3663,7 @@ input, select, textarea {
 	}
 
 
+
 	/*episode listener*/
 
 
@@ -3847,9 +3845,72 @@ input, select, textarea {
 	}
 
 	.podcast-sources{
-		background-color:  rgba(41, 117, 167, .33);
+		background-color:  rgba(41, 117, 167, 0);
 	}
 
+	.podcast-sources ul {
+		background-color:  rgba(41, 117, 167, 0);
+		display: flex;
+		margin-top: 1%;
+	}
+
+	.podcast-sources li {
+		background-color:  rgba(41, 117, 167, 0);
+		display: flex;
+	}
+	
+	#hero2 {
+		background-color:rgba(41, 117, 167, 0)
+	}
+
+	.podcast-sources li a {
+		text-decoration: none;
+		color:rgba(0, 0, 0, 0)
+	}
+
+	.listen__item {
+		background-color: rgba(41, 117, 167, 0);
+    	background-image: url(https://assets.buzzsprout.com/assets/public_players/listen_on_small-139e5a87d26ada60e09928ccf2e031e000f0c47bdf55dd912c55162b9201d7ee.svg);
+    	background-repeat: no-repeat;
+    	background-size: 25px 923px;
+    	border-radius: 0;
+    	font-size: 17px;
+    	font-weight: normal;
+    	margin-right: 15px;
+    	padding: 0;
+    	width: 25px;
+    	height: 25px;
+	}
+	
+	.listen__item--apple {
+		background-position: 0px 0px;
+	}
+	
+	.listen__item--spotify {
+		background-position: 0px -40px;
+	}
+
+	.listen__item--google {
+		background-position: 0px -80px;
+	}
+
+	.listen__item--podcastindex {
+		background-position: 0px -811px;
+	}
+	
+	.listen__item--overcast {
+		background-position: 0px -280px;
+	}
+	
+	.listen__item--amazon {
+		background-position: 0px -651px;
+	}
+
+	.listen__item--stitcher {
+		background-position: 0px -115px;
+	}
+
+	
 
 	ul.menu {
 		list-style: none;
