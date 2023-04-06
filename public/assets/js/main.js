@@ -66,6 +66,8 @@
 
 })(jQuery);
 
+
+
 /* Episode Listener */
 
 let playpause_btn = document.querySelector(".playpause-track");
@@ -74,6 +76,8 @@ let seek_slider = document.querySelector(".seek_slider");
 let curr_time = document.querySelector(".current-time");
 let total_duration = document.querySelector(".total-duration");
 
+
+
 //Global values
 let isPlaying = false; 
 let updateTimer;
@@ -81,8 +85,6 @@ let updateTimer;
 // Create the audio element for the player
 let curr_track = document.createElement('audio');
 
-//convert episode lengths
-console.log(document.querySelector(".episode-list").childNodes[1].childNodes[7].innerHTML)
 
 
 function firstTrack(loadTrack) {
@@ -189,6 +191,8 @@ function seekTo() {
     // Set the current track position to the calculated seek position
     curr_track.currentTime = seekto;
 }
+
+
     
 
     
@@ -203,23 +207,42 @@ function seekUpdate() {
         // Calculate the time left and the total duration
         let currentMinutes = Math.floor(curr_track.currentTime / 60);
         let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+		let currentHours = Math.floor(curr_track.currentTime / 3600);
+		let durationHours = Math.floor(curr_track.duration / 3600);
         let durationMinutes = Math.floor(curr_track.duration / 60);
         let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
     
+		//check if current hour is greater than 0, update minutes
+		if(currentHours > 0){ currentMinutes = currentMinutes - 60 }
+
+		if(durationHours > 0){ durationMinutes = durationMinutes - 60 }
+
+
         // Add a zero to the single digit time values
         if (currentSeconds < 10) { currentSeconds = "0" + currentSeconds; }
         if (durationSeconds < 10) { durationSeconds = "0" + durationSeconds; }
         if (currentMinutes < 10) { currentMinutes = "0" + currentMinutes; }
         if (durationMinutes < 10) { durationMinutes = "0" + durationMinutes; }
+
+		
     
         // Display the updated duration
-        curr_time.textContent = currentMinutes + ":" + currentSeconds;
-        total_duration.textContent = durationMinutes + ":" + durationSeconds;
+		if(currentHours > 0){
+			curr_time.textContent = currentHours + ":" + currentMinutes + ":" + currentSeconds;
+		} else {
+			curr_time.textContent = currentMinutes + ":" + currentSeconds;
+		}
+        
+		if(durationHours > 0){
+			total_duration.textContent = durationHours + ":" + durationMinutes + ":" + durationSeconds;
+		} else {
+			total_duration.textContent = durationMinutes + ":" + durationSeconds;
+		}
+      
     }
 }
+
 
 firstTrack(loadTrack)
 
 
-
-// merch page

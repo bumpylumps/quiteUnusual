@@ -3695,7 +3695,7 @@ input, select, textarea {
 		position: relative;
 		padding-top: 2%;
 		width: max-content;
-		height: 44px;
+		height: 50px;
 		color: royalblue;
 		font-weight: bold;
 		font-size: 1.5em;
@@ -3708,7 +3708,7 @@ input, select, textarea {
 		position: relative;
 		padding-top: 2%;
 		width: max-content;
-		height: 44px;
+		height: 50px;
 		color: royalblue;
 		font-weight: bold;
 		font-size: 1.5em;
@@ -3761,7 +3761,7 @@ input, select, textarea {
 	  }
 
 	  .current-time {
-		width: 7%;
+		width: fit-content;
 		max-width: 9%;
 		margin-right: 4%;
 	}
