@@ -269,6 +269,16 @@ input, select, textarea {
 
 		}
 
+		@media screen and (max-width: 580px){
+			.container {
+				width: 100% 
+			}
+
+			#homeCaro {
+				height: 175px;
+			}
+		}
+
 		@media screen and (max-width: 480px) {
 
 			.container {
@@ -3201,7 +3211,6 @@ input, select, textarea {
 					}
 
 			#navPanel {
-				background-color: #1f1f1f;
 				box-shadow: inset -1px 0 3px 0 rgba(0, 0, 0, 0.5);
 				background-image: -moz-linear-gradient(left, rgba(0,0,0,0) 75%, rgba(0,0,0,0.15)), url("images/bg01.png");
 				background-image: -webkit-linear-gradient(left, rgba(0,0,0,0) 75%, rgba(0,0,0,0.15)), url("images/bg01.png");
@@ -3471,10 +3480,10 @@ input, select, textarea {
 
 	#logo {
 		width: 33%;
-    	border-radius: 5%;
-    	margin: 5% 1%;
-    	margin-top: 1%;
-    	margin-bottom: 10%;
+		border-radius: 5%;
+		margin: 5% 1%;
+		margin-top: 1%;
+		margin-bottom: 4%;
 	}
 
 #name, #email, #message{
@@ -3736,7 +3745,7 @@ input, select, textarea {
 		padding-top: 2%;
 		width: max-content;
 		height: 50px;
-		color: royalblue;
+		color: darkblue;
 		font-weight: bold;
 		font-size: 1.5em;
 		overflow: hidden;
@@ -3763,16 +3772,21 @@ input, select, textarea {
 
 	.episode-player {
 		display: flex;
-    	width: 95%;
-    	margin: 0 auto;
-    	justify-content: space-between;
-    	align-items: center;
+		width: 100%;
+		margin: 0 auto;
+		padding: 2% 1%;
+		outline: 2px solid rgba(102, 51, 153,.3);
+		justify-content: space-around;
+		background: rgba(102, 51, 153,.3);
+		align-items: center;
+		border-radius: 1%;
 	}
 
 	.playpause-track {
-		margin-bottom: 15%;
     	color: darkblue;
+		font-size: .7em;
 	}
+
 
 	.fa-play-circle .fa-pause-circle {
 		width: 100%;
@@ -3815,15 +3829,15 @@ input, select, textarea {
 
 	.episode-list-container {
 		width: 97%;
-		height: 263px;
+		height: 245px;
 		margin: 1%;
 		overflow: scroll;
 		overflow-x: hidden;
+		outline: 2px solid purple
 	}
 
 	.episode-list {
 		width: 98%;
-    	margin: 2% 0;
     	padding-left: 0.3%;
 	}
 
@@ -3832,7 +3846,7 @@ input, select, textarea {
 		display: flex;
 		outline: 2px solid purple;
     	display: flex;
-    	color: rebeccapurple;
+    	color: darkblue;
     	font-weight: bold;
 	}
 
@@ -3848,11 +3862,11 @@ input, select, textarea {
 
 	.episodeItem span {
 		padding: 2% 0%;
-    	margin: 0;
-    	width: 100%;
-		line-height: 2;
-    	height: 50px;
-    	overflow: hidden;
+		margin: 0;
+		width: 100%;
+		line-height: 1.2;
+		height: fit-content;
+		overflow: hidden;
 	}
 
 	#episode-title {
