@@ -4547,3 +4547,17 @@ input, select, textarea {
 			height: 150px;
 		}
 	}
+
+	@media screen and (min-width: 375px) and (max-width: 429px) {
+		#homeCaro {
+			height: 125px;
+		}
+
+		#logo {
+			height: 250px;
+		}
+
+		.bioImage {
+			height: 200px;
+		}
+	}
