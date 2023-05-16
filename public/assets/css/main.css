@@ -77,6 +77,7 @@ input, select, textarea {
 
 	html {
 		box-sizing: border-box;
+		
 	}
 
 	*, *:before, *:after {
@@ -84,7 +85,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: #f7f7f7 url("images/bannerone.png");
+		background: url(https://res.cloudinary.com/bumpsites/image/upload/v1666388671/QuiteUnusual/stars2_wonnkt.png);
+		animation: .75s linear 0s 1 running fadeIn;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -3872,9 +3874,7 @@ input, select, textarea {
 		padding-bottom: 2%;
 	}
 
-	body {
-		background: url(images/stars2.png);
-	}
+	
 
 	/* mobile layouts */
 
