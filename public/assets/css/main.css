@@ -85,8 +85,8 @@ input, select, textarea {
 	}
 
 	body {
-		background: url(https://res.cloudinary.com/bumpsites/image/upload/v1666388671/QuiteUnusual/stars2_wonnkt.png);
-		animation: .75s linear 0s 1 running fadeIn;
+		background-image: url(/assets/css/images/stars.jpg);
+		animation: 1s linear 0s 1 running fadeIn;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2736,11 +2736,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style2 {
-			background-color: #404288;
-			background-image: url("images/bg02.png"), url("images/bg03.png"), url("images/bg01.png");
-			background-position: top left,						bottom left,					top left;
-			background-size: 100% 6em,						100% 6em,						auto;
-			background-repeat: no-repeat,						no-repeat,						repeat;
+			background-color: #404288;					
 		}
 
 		.wrapper.style3 {
