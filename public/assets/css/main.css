@@ -3616,19 +3616,6 @@ input, select, textarea {
 	/*episode listener*/
 
 
-
-	@keyframes example {
-		0% {
-			transform: translateX(100%);
-		  }
-		  
-		100% {
-			transform: translateX(-100%);
-			}
-		
-		  
-	}
-
 	
 	.details {
 		width: 100%;
@@ -3636,33 +3623,45 @@ input, select, textarea {
 		
 	}
 
-	.episode-name-animated {
-		animation: 18s linear 1s infinite running example;
-		animation-fill-mode: reverse;
-		margin: 2% auto;
-		margin-top: 0%;
-		position: relative;
-		padding-top: 2%;
-		width: max-content;
-		height: 50px;
-		color: royalblue;
-		font-weight: bold;
-		font-size: 1.5em;
-		overflow: hidden;
-	}
-
 	.episode-name {
 		margin: 2% auto;
 		margin-top: 0%;
 		position: relative;
 		padding-top: 2%;
-		width: max-content;
-		height: 50px;
+		width: fit-content;
+		height: 100px;
 		color: darkblue;
 		font-weight: bold;
 		font-size: 1.5em;
-		overflow: hidden;
+		opacity: 0;
+	}
+
+	.episode-name-animated {
+		animation: 2s linear .25s 1 running fadeIn;
+		animation-fill-mode: reverse;
+		margin: 2% auto;
+		margin-top: 0%;
+		position: relative;
+		padding-top: 2%;
+		color: darkblue;
+		font-weight: bold;
+		font-size: 1.5em;
+		opacity: 0;
+	}
+
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
 		}
+		  
+		100% {
+			opacity: 1;
+		}
+		
+		  
+	}
+
+	
 
 	.episode-listener-container {
 		border-radius: .5%;

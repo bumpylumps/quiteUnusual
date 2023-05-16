@@ -93,6 +93,10 @@ function firstTrack(loadTrack) {
 	loadTrack(src)
 	updateTimer = setInterval(seekUpdate, 1000);
 	document.querySelector('.episode-name').innerText = document.querySelector(".episode-list").childNodes[1].childNodes[3].innerHTML
+	
+	document.querySelector('.episode-name').classList += ' episode-name-animated'
+	setTimeout(function(){document.querySelector('.episode-name').classList.remove('episode-name-animated');}, 1000)
+	setTimeout(function(){document.getElementById('episodeName').style.opacity = 1;}, 500)
 }
 
 
@@ -105,6 +109,7 @@ function loadTrack(src) {
     // Load a new track
     curr_track.src = src;
     curr_track.load();
+
     
 }
 
@@ -119,6 +124,8 @@ function select(ep) {
     clearInterval(updateTimer);
     resetValues();
 
+	document.getElementById('episodeName').style.opacity = 0;
+
 	let src = ep.parentNode.childNodes[7].innerHTML;
 	loadTrack(src)
 	playTrack()
@@ -126,17 +133,14 @@ function select(ep) {
 	// Set an interval of 1000 milliseconds
     // for updating the seek slider
     updateTimer = setInterval(seekUpdate, 1000);
-	if(ep.parentNode.childNodes[3].innerText.length > 45){
-		document.querySelector('.episode-name').innerText = ep.parentNode.childNodes[3].innerText
-		document.querySelector('.episode-name').classList += ' episode-name-animated'
-		console.log(document.querySelector('.episode-name').classList)
 
-	} else {
-		document.querySelector('.episode-name').textContent = ep.parentNode.childNodes[3].innerText
-		document.querySelector('.episode-name').className = 'episode-name'
-		console.log()
-		
-	}
+	document.querySelector('.episode-name').textContent = ep.parentNode.childNodes[3].innerText
+	document.querySelector('.episode-name').className = 'episode-name'
+
+	document.querySelector('.episode-name').classList += ' episode-name-animated'
+	setTimeout(function(){document.querySelector('.episode-name').classList.remove('episode-name-animated');}, 2000)
+	setTimeout(function(){document.getElementById('episodeName').style.opacity = 1;}, 2000)
+	
 }
 
 function playpauseTrack() {
@@ -150,14 +154,6 @@ function playTrack() {
 	// Play the loaded track
 	curr_track.play();
 	isPlaying = true;
-	let src = document.querySelector(".episode-list").childNodes[1].childNodes[7].innerHTML;
-	if(src.length > 45){
-		document.querySelector('.episode-name').classList += ' episode-name-animated'
-	}
-	if(document.querySelector(".episode-name-animated")){
-		document.querySelector(".episode-name-animated").style.animationPlayState = "running"
-	}
-    
 
 	// Replace icon with the pause icon
 	playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
@@ -167,9 +163,6 @@ function pauseTrack() {
     // Pause the loaded track
     curr_track.pause();
     isPlaying = false;
-	if(document.querySelector(".episode-name-animated")){
-		document.querySelector(".episode-name-animated").style.animationPlayState = "paused"
-	}
     
     // Replace icon with the play icon
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
