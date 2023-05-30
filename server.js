@@ -6,8 +6,9 @@ const cors = require('cors')
 const fetch = require('node-fetch')
 
 const mainRoutes = require('./routes/main');
-const merchRoutes = require('./routes/merch')
-
+const contactRoutes = require('./routes/contact');
+const multer = require('multer')
+var upload = multer();
 
 //configs link
 require('dotenv').config({path: '.env'})
@@ -20,33 +21,17 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 
+
+app.use(upload.array()); 
+app.use(express.static('public'));
+
+
 //set routes
 app.use('/', mainRoutes);
-app.use('/merch', merchRoutes)
-
-
-app.get('/cart', async (req,res) => {
-    try {
-        res.render('cart.ejs')
-    } catch(err) {
-        if(err) {
-            console.log(`I\'m borked. Error: ${err}`)
-            return res.status(500).send(err)
-        }
-    }
-})
+app.use('/contact', contactRoutes)
 
 
 
 
 
-
-/*
-fetch(URL,params)
-.then(result=>result.json())
-.then(data=> 
-    {console.log(data)} ) 
-*/
-
-//Set up listener
 app.listen(process.env.PORT || PORT, () => console.log(`Server is running on Port: ${PORT}`))

@@ -50,7 +50,7 @@
             <div class="container submit">
                 <section class="col-6 col-12-narrower">
 			    	<h3>Got a story or topic submission? <br> Slippery slide into our DMs</h3>
-			    	<form>
+			    	<form action="/contact/submitFeedback" method="POST" id="contact-form" enctype="multipart/form-data">
 			    		<div class="row gtr-50">
 			    			<div class="col-6 col-12-mobilep">
 			    				<input type="text" name="name" id="name" placeholder="Name" />
@@ -63,7 +63,7 @@
 			    			</div>
 			    			<div class="col-12">
 			    				<ul class="actions">
-			    					<li><input type="submit" class="button alt" value="Send Message" /></li>
+			    					<li><input type="submit" id="feedback-button" class="button alt" value="Send Message" /></li>
 			    				</ul>
 			    			</div>
 			    		</div>
