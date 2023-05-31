@@ -1,4 +1,6 @@
 
+
+
 module.exports = {
     getContact: async (req,res) => {
         try {
@@ -16,18 +18,38 @@ module.exports = {
         let message = {
             name: req.body.name,
             email: req.body.email,
+            subject: req.body.subject,
             message: req.body.message
         }
         
-
         try {
+            // const data = await resend.sendEmail({
+            //   from: "alexander.fulop.art@gmail.com",
+            //   to: "alexander.fulop.art@gmail.com",
+            //   subject: "hello world",
+            //   text: "it works!",
+            // });
+        
+            //res.status(200).json(data);
             console.log(message)
-            res.json(message)
+            res.redirect('/thankYou')
+        
+          }
+          catch(e) {
+            res.status(400).json(e);
+          }
 
-        } catch(err) {
-            console.log('I\'m not working')
+        // try {
+        
 
-        }
+        //     console.log(message);
+        //     //res.status(200).json(data);
+        //     res.redirect('/')
+
+        // } catch(err) {
+        //     console.log('I\'m not working' + ' ' +  err )
+
+        // }
     } 
 
 

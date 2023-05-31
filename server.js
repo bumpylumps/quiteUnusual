@@ -4,11 +4,14 @@ const app = express();
 const PORT = 8300;
 const cors = require('cors')
 const fetch = require('node-fetch')
+const multer = require('multer')
+var upload = multer();
+const { Resend } = require('resend')
+const resend = new Resend(`${process.env.RESEND_API_KEY}`);
 
 const mainRoutes = require('./routes/main');
 const contactRoutes = require('./routes/contact');
-const multer = require('multer')
-var upload = multer();
+
 
 //configs link
 require('dotenv').config({path: '.env'})
