@@ -3551,7 +3551,7 @@ input, select, textarea {
 	}
 
 	.bioImage {
-		height: 300px;
+		height: 400px;
 		
 	}
 
@@ -3571,6 +3571,7 @@ input, select, textarea {
 
 	.slideshow {
 		width: 101%;
+		height: 150px;
 		overflow: hidden;
 		position: relative;
 
@@ -3578,35 +3579,47 @@ input, select, textarea {
 
 	.slideshow-wrapper {
 		display: flex;
-		width: 500%;
+		width: 1100%;
 		height: 100%;
 		position: relative;
-		animation: slideshow 20s infinite;
+		animation: slideshow 40s infinite;
 	}
 
 	.slide {
 		width: 100%;
-		height: 100%;
+		height: 150px;
 	}
 
 	.slide img {
 		width: 100%;
-		height: 100%;
+		height: 175px;
 		object-fit: cover;
 	}
 
 	@keyframes slideshow {
 		0%  { left: 0; }
-		12%  { left: 0; }
-		20% { left: -100%; }
-		32% { left: -100%; }
-		40% { left: -200%; }
-		52% { left: -200%; }
-		60% { left: -300%; }
-		72% { left: -300%; }
-		80% { left: -400%; }
-		92% { left: -400%; }
-		100% { left: 0%; }
+		4.5%  { left: 0%; }
+		9% { left: -100%; }
+		13.5% { left: -100%; }
+		18% { left: -200%; }
+		22.5% { left: -200%; }
+		27% { left: -300%; }
+		31.5% { left: -300%; }
+		36% { left: -400%; }
+		40.5% { left: -400%; }
+		45% { left: -500%; }
+		49.5% { left: -500%; }
+		54%  { left: -600%; }
+		58.5%  { left: -600%; }
+		63% { left: -700%; }
+		67.5% { left: -700%; }
+		72% { left: -800%; }
+		76.5% { left: -800%; }
+		81% { left: -900%; }
+		85.5% { left: -900%; }
+		90% { left: -1000%; }
+		94.5% { left: -1000%; }
+		100% { left: 0; }
 	}
 
 
@@ -3886,6 +3899,18 @@ input, select, textarea {
 			width: 75%;
 		}
 
+		.slideshow {
+			height: 550px; 
+		}
+
+		.slide {
+			height: 600px;
+		}
+
+		.slide img {
+			height: inherit;
+		}
+
 
 
 	}
@@ -3901,10 +3926,36 @@ input, select, textarea {
 			height: 475px
 		}
 
+		.slideshow {
+			height: 475px; 
+		}
+
+		.slide {
+			height: 475px;
+		}
+
+		.slide img {
+			height: inherit;
+		}
+
 	}
+
+
 	@media screen and (min-width: 1281px) and (max-width: 1679px){
 		#homeCaro {
 			height: 400px;
+		}
+
+		.slideshow {
+			height: 400px; 
+		}
+
+		.slide {
+			height: 450px;
+		}
+
+		.slide img {
+			height: inherit;
 		}
 	}
 
@@ -3915,7 +3966,19 @@ input, select, textarea {
 		}
 
 		#homeCaro {
-			height: 380px; 
+			height: 400px; 
+		}
+
+		.slideshow {
+			height: 400px;
+		}
+
+		.slide {
+			height: 400px;
+		}
+
+		.slide img {
+			height: inherit;
 		}
 
 
@@ -3928,7 +3991,19 @@ input, select, textarea {
 
 	@media screen and (min-width: 981px) and (max-width: 1279px){
 		#homeCaro {
-			height: 300px;
+			height: 400px;
+		}
+
+		.slideshow {
+			height: 400px;
+		}
+
+		.slide {
+			height: 400px;
+		}
+
+		.slide img {
+			height: inherit;
 		}
 	}
 
@@ -3942,9 +4017,23 @@ input, select, textarea {
 			height: 300px;
 		}
 
+		.slideshow {
+			height: 300px;
+		}
+
+		.slide {
+			height: 300px;
+		}
+
+		.slide img {
+			height: inherit;
+		}
+
 		#logo {
 			height: 250px;
 		}
+
+		
 
 	}
 
@@ -3955,8 +4044,21 @@ input, select, textarea {
 		}
 
 		#homeCaro {
-			height: 275px;
+			height: 300px;
 			width: 90%;
+		}
+
+		.slideshow {
+			height: 300px;
+		}
+
+		.slide {
+			height: 300px;
+		}
+
+
+		.slide img {
+			height: inherit;
 		}
 
 		#logo {
@@ -4104,8 +4206,20 @@ input, select, textarea {
 		}
 
 		#homeCaro {
-			height: 220px;
+			height: 300px;
 			width: 90%;
+		}
+
+		.slideshow {
+			height: 300px;
+		}
+
+		.slide {
+			height: 300px;
+		}
+
+		.slide img {
+			height: inherit;
 		}
 
 		#logo {
@@ -4256,6 +4370,18 @@ input, select, textarea {
 		#homeCaro {
 			height: 175px;
 			width: 90%;
+		}
+
+		.slideshow {
+			height: 200px;
+		}
+		
+		.slide {
+			height: 200px;
+		}
+
+		.slide img {
+			height: inherit;
 		}
 
 
@@ -4411,7 +4537,7 @@ input, select, textarea {
 		}
 
 		#homeCaro {
-			height: 100px;
+			height: 200px;
 			width: 90%;
 		}
 
@@ -4422,6 +4548,17 @@ input, select, textarea {
 			margin-top: 10%;
 			margin-bottom: 5%;
 		}
+
+		.slideshow {
+			height: 200px;
+		}
+		
+
+		.slide img {
+			height: 200px;
+		}
+
+		
 
 		.episode-listener-container {
 			border-radius: .5%;
@@ -4561,7 +4698,7 @@ input, select, textarea {
 
 	@media screen and (min-width: 375px) and (max-width: 429px) {
 		#homeCaro {
-			height: 125px;
+			height: 150px;
 		}
 
 		#logo {
