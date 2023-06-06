@@ -3579,7 +3579,7 @@ input, select, textarea {
 
 	.slideshow-wrapper {
 		display: flex;
-		width: 1100%;
+		width: 900%;
 		height: 100%;
 		position: relative;
 		animation: slideshow 40s infinite;
@@ -3598,27 +3598,23 @@ input, select, textarea {
 
 	@keyframes slideshow {
 		0%  { left: 0; }
-		4.5%  { left: 0%; }
-		9% { left: -100%; }
-		13.5% { left: -100%; }
-		18% { left: -200%; }
-		22.5% { left: -200%; }
-		27% { left: -300%; }
-		31.5% { left: -300%; }
-		36% { left: -400%; }
-		40.5% { left: -400%; }
-		45% { left: -500%; }
-		49.5% { left: -500%; }
-		54%  { left: -600%; }
-		58.5%  { left: -600%; }
-		63% { left: -700%; }
-		67.5% { left: -700%; }
-		72% { left: -800%; }
-		76.5% { left: -800%; }
-		81% { left: -900%; }
-		85.5% { left: -900%; }
-		90% { left: -1000%; }
-		94.5% { left: -1000%; }
+		5.5%  { left: 0%; }
+		11% { left: -100%; }
+		16.5% { left: -100%; }
+		22% { left: -200%; }
+		27.5% { left: -200%; }
+		33% { left: -300%; }
+		38.5% { left: -300%; }
+		44% { left: -400%; }
+		49.5% { left: -400%; }
+		55% { left: -500%; }
+		60.5% { left: -500%; }
+		66% { left: -600%; }
+		71.5% { left: -600%; }
+		77% { left: -700%; }
+		82.5% { left: -700%; }
+		88% { left: -800%; }
+		93.5% { left: -800%; }
 		100% { left: 0; }
 	}
 
