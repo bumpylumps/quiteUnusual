@@ -2554,7 +2554,7 @@ input, select, textarea {
     .logoContainer{
         display: flex;
         width: 100%;
-		background-image: url("images/bannertwo.png");
+		background-image: url("https://res.cloudinary.com/bumpsites/image/upload/v1687460710/bannertwo_h7p6pj.png");
 		background-size: 100%;
     }
 
