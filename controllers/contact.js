@@ -1,3 +1,4 @@
+const { Resend } = require('resend')
 
 
 
@@ -14,7 +15,8 @@ module.exports = {
     },
 
     submitFeedback: async (req,res) => {
-
+        const resend = new Resend(`${process.env.RESEND_API_KEY}`);
+        
         let message = {
             name: req.body.name,
             email: req.body.email,
@@ -23,19 +25,20 @@ module.exports = {
         }
         
         try {
-            // const data = await resend.sendEmail({
-            //   from: "alexander.fulop.art@gmail.com",
-            //   to: "alexander.fulop.art@gmail.com",
-            //   subject: "hello world",
-            //   text: "it works!",
-            // });
-        
-            //res.status(200).json(data);
-            console.log(message)
+            
+             const data = await resend.sendEmail({
+               from: "FanMail@quiteunusualpod.com",
+               to: "alexander.fulop.art@gmail.com",
+               subject: req.body.subject,
+               text: `${req.body.name} sent you fanmail from ${req.body.email}! 
+               Their message: ${req.body.message}`,
+             });
+
             res.redirect('/thankYou')
         
           }
           catch(e) {
+            console.log(e)
             res.status(400).json(e);
           }
 

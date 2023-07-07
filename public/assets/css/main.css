@@ -2009,6 +2009,7 @@ input, select, textarea {
 	input[type="password"],
 	input[type="email"] {
 		line-height: 1em;
+		color: #404288 !important;
 	}
 
 	label {
@@ -3361,6 +3362,10 @@ input, select, textarea {
 		margin: 5% auto;
 	}
 
+	.warning {
+		visibility: hidden;
+	}
+
 	.submit{
 		width: 60%;
 		margin: 5% auto;
@@ -3726,7 +3731,6 @@ input, select, textarea {
 		margin-right: 4%;
 	}
 	
-
 	.buttons:hover{
 		cursor: pointer;
 	}
