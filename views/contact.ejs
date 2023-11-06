@@ -16,7 +16,9 @@
 		<!--Font Awesome-->
 		<link rel="stylesheet"
 		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-
+		
+		<!--ReCaptcha-->
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
     </head>
 
@@ -66,6 +68,7 @@
 			    			</div>
 			    			<div class="col-12">
 			    				<ul class="actions">
+									<div class="g-recaptcha" data-sitekey= "<%= process.env.RECAPTCHA_SITE_KEY %>"></div>
 			    					<li><input type="submit" id="feedback-button" class="button alt" value="Send Message" /></li>
 			    				</ul>
 			    			</div>

@@ -11,6 +11,7 @@
   "author": "bumpyLumps",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.0",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
@@ -20,6 +21,7 @@
     "node-fetch": "^2.6.6",
     "nodemon": "^2.0.22",
     "railway": "^2.0.17",
+    "request": "^2.88.2",
     "resend": "^0.15.1"
   }
 }
