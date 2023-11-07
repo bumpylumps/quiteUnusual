@@ -104,28 +104,7 @@
 
 		</div>
 
-		<!-- Scripts -->
-			<script>
-				function onSubmitForm(e){
-					e.preventDefault();
-
-					grecaptcha.execute(`${process.env.RECAPTCHA_SITE_KEY}`, { action: 'submit' }).then(function(token) {
-						const form = document.querySelector('form');
-						const captchaValue = document.createElement('input');
-						captchaValue.type='hidden';
-						captchaValue.name='captchaValue';
-						captchaValue.value=token;
-						form.appendChild(captchaValue);
-
-						form.submit();
-					});
-					
-					const form = document.querySelector('form');
-					form.addEventListener('submit', onSubmitForm);
-				}
-			</script>
-
-			
+			<!-- Scripts -->
 			<script src="/assets/js/jquery.min.js"></script>
 			<script src="/assets/js/jquery.dropotron.min.js"></script>
 			<script src="/assets/js/browser.min.js"></script>

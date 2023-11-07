@@ -22,15 +22,15 @@ module.exports = {
 
     getValidation: async (req, res) =>{ 
         const RECAPTCHA_SECRET_KEY = `${process.env.RECAPTCHA_SECRET_KEY}`
-        const { captchaValue } = req.body;
+        const captchaValue = req.body['g-recaptcha-response'];
         
         try{ 
             const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${captchaValue}`);
 
             console.log(response.data);
             if(response.data.success){
-                // this.submitFeedback();
-                res.status(200).json({ message: 'Successful submit'})
+                
+                res.status(200).json({ message: `${JSON.stringify(response.data)}`})
             } else {
                 res.status(400).json({ error: 'recaptcha verification failed' });
             }
