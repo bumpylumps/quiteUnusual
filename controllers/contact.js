@@ -1,7 +1,11 @@
 const { Resend } = require('resend');
 const request = require('request');
 const axios = require("axios")
-const RECAPTCHA_SECRET_KEY = `${process.env.RECAPTCHA_SECRET_KEY}`
+const Recaptcha = require('recaptcha').Recaptcha;
+const bodyParser = require('body-parser');
+
+
+
 
 
 module.exports = {
@@ -16,33 +20,29 @@ module.exports = {
         }
     },
 
-    // getValidation: async (request, response) =>{ 
-        // const { ValidationToken } = request.body;
-        // const { data } = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${ValidationToken}`);
-// 
-// 
-        // console.log(data)
-        // if(data.success){
-            // return true;
-        // } else {
-            // return false;
-        // }
-    // },
+    getValidation: async (req, res) =>{ 
+        const RECAPTCHA_SECRET_KEY = `${process.env.RECAPTCHA_SECRET_KEY}`
+        const { captchaValue } = req.body;
+        
+        try{ 
+            const response = await axios.post(`https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${captchaValue}`);
+
+            console.log(response.data);
+            if(response.data.success){
+                // this.submitFeedback();
+                res.status(200).json({ message: 'Successful submit'})
+            } else {
+                res.status(400).json({ error: 'recaptcha verification failed' });
+            }
+        } catch(error) {
+            console.error('recaptcha verification error: ', error);
+        }
+    
+    },
 
     submitFeedback: async (req, res) => {
         const resend = new Resend(`${process.env.RESEND_API_KEY}`);
-        
-
-        // let message = {
-        //     name: req.body.name,
-        //     email: req.body.email,
-        //     subject: req.body.subject,
-        //     message: req.body.message
-        // }
-
-        // let validation = getValidation();
-
-        // if(validation === true){  
+         
             try {  
                 const data = await resend.sendEmail({
                    from: "FanMail@quiteunusualpod.com",
@@ -59,10 +59,7 @@ module.exports = {
             res.status(400).json(e);
           } 
         
-        // } else {
-                // console.log('it\'s broken')
-            // }
-        // }
+
                 
     } 
 }

@@ -21,6 +21,8 @@
     "node-fetch": "^2.6.6",
     "nodemon": "^2.0.22",
     "railway": "^2.0.17",
+    "react-google-recaptcha": "^3.1.0",
+    "recaptcha": "^1.2.1",
     "request": "^2.88.2",
     "resend": "^0.15.1"
   }

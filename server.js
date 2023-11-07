@@ -8,6 +8,7 @@ const multer = require('multer')
 var upload = multer();
 const { Resend } = require('resend')
 const resend = new Resend(`${process.env.RESEND_API_KEY}`);
+const bodyParser = require('body-parser');
 
 const mainRoutes = require('./routes/main');
 const contactRoutes = require('./routes/contact');
@@ -22,12 +23,15 @@ require('dotenv').config({path: '.env'})
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
 
 
 app.use(upload.array()); 
 app.use(express.static('public'));
 
+app.use(cors());
 
 //set routes
 app.use('/', mainRoutes);
