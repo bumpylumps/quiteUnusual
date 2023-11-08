@@ -73,7 +73,8 @@
 			    				<textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
 			    			</div>
 			    			<div class="col-12">
-			    				<ul class="actions">
+			    				<h3 id="botGrab">Please verify your message with Recaptcha: No bots allowed!</h3>
+                                <ul class="actions">
 									<div class="g-recaptcha" data-sitekey= "<%= process.env.RECAPTCHA_SITE_KEY %>"></div>
 			    					<li><input type="button" id="feedback-button" class="button alt" value="Send Message" /></li>
 			    				</ul>
@@ -83,6 +84,7 @@
 			    </section>
             </div>
 
+           
             <section class="col-6 col-12-narrower">
                 <h3><a href="https://www.speakpipe.com/quiteunusualpod" target="_blank" id="voiceMailLink"> Or send us a voicemail!</a></h3> 
             </section>

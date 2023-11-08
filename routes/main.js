@@ -13,5 +13,6 @@ router.get('/', indexController.getIndex);
 router.get('/about', aboutController.getAbout);
 router.get('/contact', contactController.getContact);
 router.get('/thankYou', thankYouController.getThankYou);
+router.get('/notVerified', contactController.getNotVerified);
 
 module.exports = router;

@@ -3402,7 +3402,7 @@ input, select, textarea {
 		margin-bottom: 4%;
 	}
 
-#name, #email, #message{
+#name, #email, #message, #subject{
 	background-color: #D5F0FC;
 	color:#404288 ;
 }
@@ -4713,3 +4713,12 @@ input, select, textarea {
 	#voiceMailLink:hover {
 		color: rgb(226,102,221)
 	}
+
+
+	#botGrab {
+		width: fit-content;
+		margin: 2% auto;
+		color: #f93f71;
+	}
+
+
