@@ -32,7 +32,7 @@ module.exports = {
             if(response.data.success){
                 const data = await resend.sendEmail({
                     from: "FanMail@quiteunusualpod.com",
-                    to: "bumpsites@gmail.com",
+                    to: "quiteunusualpod@gmail.com",
                     subject: req.body.subject,
                     text: `${req.body.name} sent you fanmail from ${req.body.email}! 
                     Their message: ${req.body.message}`,

@@ -67,32 +67,7 @@
 })(jQuery);
 
 
-/* contact form */
 
-// async function submitForm(event){
-// 	event.preventDefault();
-// 	const captchaValue = recaptcha.current.getValue();
-
-// 	if(!captchaValue){
-// 		alert('Please verify the reCAPTCHA!');
-// 	} else {
-// 		const res = await fetch("http://localhost:8300/verify", {
-// 			method: "POST",
-// 			body: JSON.stringify({ captchaValue }),
-// 			headers: {
-// 				"content-type": "application/json",
-// 			},
-// 		});
-// 	}
-
-// 	const data = await res.json();
-// 	if(data.success) {
-// 		console.log(data)
-// 	} else {
-// 		alert("you have an issue")
-// 	}
-
-// }
 
 
 
@@ -268,5 +243,4 @@ function seekUpdate() {
 
 
 firstTrack(loadTrack)
-
 
