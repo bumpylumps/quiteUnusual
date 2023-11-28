@@ -69,17 +69,30 @@
 
 /* contact form */
 
-const feedbackButton = document.getElementById('feedback-button');
+// async function submitForm(event){
+// 	event.preventDefault();
+// 	const captchaValue = recaptcha.current.getValue();
 
-function submit(event){
-	document.forms["contact-form"].submit();
+// 	if(!captchaValue){
+// 		alert('Please verify the reCAPTCHA!');
+// 	} else {
+// 		const res = await fetch("http://localhost:8300/verify", {
+// 			method: "POST",
+// 			body: JSON.stringify({ captchaValue }),
+// 			headers: {
+// 				"content-type": "application/json",
+// 			},
+// 		});
+// 	}
 
-}
+// 	const data = await res.json();
+// 	if(data.success) {
+// 		console.log(data)
+// 	} else {
+// 		alert("you have an issue")
+// 	}
 
-
-feedbackButton.addEventListener('click', submit);
-
-
+// }
 
 
 
